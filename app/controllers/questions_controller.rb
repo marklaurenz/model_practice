@@ -4,7 +4,11 @@ class QuestionsController < ApplicationController
 
     # Your Ruby goes here.
 
-    # @most_recent_movie_for_second_actor = ???
+    the_second_actor = Actor.second.name
+
+    the_second_actors_movies = Movies.find(the_second_actor)
+
+    @most_recent_movie_for_second_actor = the_second_actors_movies
   end
 
   def question_2
